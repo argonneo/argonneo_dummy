@@ -1,0 +1,1280 @@
+<html lang="en" dir="ltr" class="toolbar-loading toolbar-anti-flicker"><head>
+    <meta charset="utf-8">
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-100765151-3&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-K9G619HRBE&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TL6N5FW"></script><script type="text/javascript" data-toolbar-anti-flicker-loading="">(function() {
+  const toolbarState = sessionStorage.getItem('Drupal.toolbar.toolbarState')
+    ? JSON.parse(sessionStorage.getItem('Drupal.toolbar.toolbarState'))
+    : false;
+  // These are classes that toolbar typically adds to <body>, but this code
+  // executes before the first paint, when <body> is not yet present. The
+  // classes are added to <html> so styling immediately reflects the current
+  // toolbar state. The classes are removed after the toolbar completes
+  // initialization.
+  const classesToAdd = ['toolbar-loading', 'toolbar-anti-flicker'];
+  if (toolbarState) {
+    const {
+      orientation,
+      hasActiveTab,
+      isFixed,
+      activeTray,
+      activeTabId,
+      isOriented,
+      userButtonMinWidth
+    } = toolbarState;
+
+    classesToAdd.push(
+      orientation ? `toolbar-` + orientation + `` : 'toolbar-horizontal',
+    );
+    if (hasActiveTab !== false) {
+      classesToAdd.push('toolbar-tray-open');
+    }
+    if (isFixed) {
+      classesToAdd.push('toolbar-fixed');
+    }
+    if (isOriented) {
+      classesToAdd.push('toolbar-oriented');
+    }
+
+    if (activeTray) {
+      // These styles are added so the active tab/tray styles are present
+      // immediately instead of "flickering" on as the toolbar initializes. In
+      // instances where a tray is lazy loaded, these styles facilitate the
+      // lazy loaded tray appearing gracefully and without reflow.
+      const styleContent = `
+      .toolbar-loading #` + activeTabId + ` {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.25) 20%, transparent 200%);
+      }
+      .toolbar-loading #` + activeTabId + `-tray {
+        display: block; box-shadow: -1px 0 5px 2px rgb(0 0 0 / 33%);
+        border-right: 1px solid #aaa; background-color: #f5f5f5;
+        z-index: 0;
+      }
+      .toolbar-loading.toolbar-vertical.toolbar-tray-open #` + activeTabId + `-tray {
+        width: 15rem; height: 100vh;
+      }
+     .toolbar-loading.toolbar-horizontal :not(#` + activeTray + `) > .toolbar-lining {opacity: 0}`;
+
+      const style = document.createElement('style');
+      style.textContent = styleContent;
+      style.setAttribute('data-toolbar-anti-flicker-loading', true);
+      document.querySelector('head').appendChild(style);
+
+      if (userButtonMinWidth) {
+        const userButtonStyle = document.createElement('style');
+        userButtonStyle.textContent = `#toolbar-item-user {min-width: ` + userButtonMinWidth +`px;}`
+        document.querySelector('head').appendChild(userButtonStyle);
+      }
+    }
+  }
+  document.querySelector('html').classList.add(...classesToAdd);
+})();</script>
+<meta name="msapplication-TileImage" content="/themes/finastracanada/favicon.ico">
+<link rel="icon" href="/themes/custom/finastracanada/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="alternate" hreflang="en" href="./overview.html">
+<link rel="alternate" hreflang="fr" href="https://www.finastracanada.com/fr/technologie-de-pret-hypothecaire">
+<link rel="icon" href="/themes/finastracanada/favicon.ico" sizes="32x32">
+<link rel="icon" href="/themes/finastracanada/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/themes/finastracanada/favicon-192x192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/themes/finastracanada/favicon.ico">
+<link rel="canonical" href="./overview.html">
+<link rel="shortlink" href="https://www.finastracanada.com/node/101">
+
+    <title>Overview | Finastra Canada</title>
+    <link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/ajax-progress.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/align.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/autocomplete-loading.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/fieldgroup.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/container-inline.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/clearfix.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/details.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/hidden.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/item-list.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/js.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/nowrap.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/position-container.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/progress.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/reset-appearance.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/resize.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/sticky-header.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/system-status-counter.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/system-status-report-counters.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/system-status-report-general-info.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/tabledrag.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/tablesort.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/tree-child.module.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/layouts/layout_discovery/onecol/onecol.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/layouts/layout_builder/twocol_section/twocol_section.css?sax2na">
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/core/assets/vendor/normalize-css/normalize.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/action-links.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/breadcrumb.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/button.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/container-inline.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/details.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/exposed-filters.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/field.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/form.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/icons.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/inline-form.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/item-list.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/link.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/links.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/menu.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/more-link.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/pager.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/tabledrag.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/tableselect.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/tablesort.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/tabs.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/textarea.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/ui-dialog.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/messages.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/components/node.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/swiper-bundle.min.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/font-awesome/font-awesome.min.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/main.css?sax2na">
+<link rel="stylesheet" media="all" href="/themes/custom/finastracanada/css/grid.css?sax2na">
+
+    
+    <link rel="stylesheet" id="redux-google-fonts-grve_blade_options-css" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C700%2C500%7CMontserrat%3A700%7CCabin+Condensed%3A400%2C600&amp;ver=1625124056" type="text/css" media="all">
+                      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-TL6N5FW');</script>
+
+            <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-100765151-3"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-100765151-3');
+            </script>
+            <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin,.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing{display:block;display:initial;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:none;}</style></head>
+  <body class="path-node page-node-type-page page page-id-101 grve-body grve-stretched">
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6N5FW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="98838fd5-0f77-4da3-894d-e4e91dd0092a" type="text/javascript" async=""></script>
+        <a href="#main-content" class="visually-hidden focusable skip-link" tabindex="0">
+      Skip to main content
+    </a>
+    
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'off_canvas_page_wrapper' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/content/off-canvas-page-wrapper.html.twig' -->
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page' -->
+<!-- FILE NAME SUGGESTIONS:
+   * page--node--101.html.twig
+   * page--node--%.html.twig
+   * page--node.html.twig
+   x page.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/layout/page.html.twig' -->
+<div class="layout-container">
+
+  <div class="top-bar">
+    <div class="page-container">
+      <nav class="top-bar-navigation" aria-label="secondary">
+                  <ul class="top-bar-menu">
+                                        	                                <li class="menu-item">
+                  <a href="/contact-us" aria-label="CONTACT US" tabindex="0">CONTACT US</a>
+                </li>
+                                                                      	                                <li class="menu-item">
+                  <a href="/about-us" aria-label="ABOUT US" tabindex="0">ABOUT US</a>
+                </li>
+                                                      <li class="menu-item">
+              <a href="/overview" aria-label="English" tabindex="0">English</a>
+            </li>
+            <li class="menu-item">
+              <a href="/fr/technologie-de-pret-hypothecaire" aria-label="Français" tabindex="0">Français</a>
+            </li>
+          </ul>
+                <div class="btn-search">
+          <a href="#search-modal" tabindex="0" class="blade-icon-search toggle-modal" role="button" title="Show the search box" aria-label="Show the search box"></a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   x region--header.html.twig
+   * region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/layout/region--header.html.twig' -->
+<header class="header" role="banner">
+  <div class="header-wrapper">
+    <div class="header-default">
+      <div class="header-container page-container">
+        <div class="logo">
+                    <a href="/" tabindex="0">
+            <img class="logo-img" src="/themes/custom/finastracanada/logo.svg" alt="The Finastra Canada Logo" data-no-retina="" width="279" h="" eight="139.67">
+          </a>
+        </div>
+        <div class="header-spacer" style="min-width:160px"></div>
+                  <nav class="header-navigation" aria-label="primary">
+            <ul class="header-menu">
+                                                                                                                  <li class="menu-item active has-sub">
+                                                                                                              <a href="" title="Mortgage Technology" aria-label="Mortgage Technology" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                          Mortgage Technology
+                        </a>
+                                                                                    <ul class="sub-menu" aria-haspopup="true" aria-expanded="false">
+                                                                                                                                      <li class="menu-item active">
+                                                                                            <a href="/overview" title="Overview" aria-label="Overview" tabindex="0" aria-expanded="false">
+                                  Overview
+                                </a>
+                                                          </li>
+                                                                                                                                                                <li class="menu-item">
+                                                                                            <a href="/filogix-community" title="Filogix Expert Community" aria-label="Filogix Expert Community" tabindex="0" aria-expanded="false">
+                                  Filogix Expert Community
+                                </a>
+                                                          </li>
+                                                                                                                                                                <li class="menu-item">
+                                                                                            <a href="/filogix-expert" title="Filogix Expert Solutions" aria-label="Filogix Expert Solutions" tabindex="0" aria-expanded="false">
+                                  Filogix Expert Solutions
+                                </a>
+                                                          </li>
+                                                                                                                                                                <li class="menu-item">
+                                                                                            <a href="/mortgage-technology/filogix-mortgage-marketplace" title="Filogix Mortgage Marketplace" aria-label="Filogix Mortgage Marketplace" tabindex="0" aria-expanded="false">
+                                  Filogix Mortgage Marketplace
+                                </a>
+                                                          </li>
+                                                                                                                                                                <li class="menu-item">
+                                                                                            <a href="/filogix-private-lender-gateway" title="Filogix Private Lender Gateway" aria-label="Filogix Private Lender Gateway" tabindex="0" aria-expanded="false">
+                                  Filogix Private Lender Gateway
+                                </a>
+                                                          </li>
+                                                                                                                                                                <li class="menu-item">
+                                                                                            <a href="/technical-support" title="Filogix Technical Support" aria-label="Filogix Technical Support" tabindex="0" aria-expanded="false">
+                                  Filogix Technical Support
+                                </a>
+                                                          </li>
+                                                                                                                                                                <li class="menu-item">
+                                                                                            <a href="/releases" title="Filogix Releases" aria-label="Filogix Releases" tabindex="0" aria-expanded="false">
+                                  Filogix Releases
+                                </a>
+                                                          </li>
+                                                                        </ul>
+                                      </li>
+                                                                                                    <li class="menu-item">
+                                                                                                              <a href="/cheque-services" title="Cheque Services" aria-label="Cheque Services" tabindex="0" aria-haspopup="false" aria-expanded="false">
+                          Cheque Services
+                        </a>
+                                                                                </li>
+                                                                                                    <li class="menu-item">
+                                                                                                              <a href="/payment-manager" title="Payment Manager" aria-label="Payment Manager" tabindex="0" aria-haspopup="false" aria-expanded="false">
+                          Payment Manager
+                        </a>
+                                                                                </li>
+                                                                                                    <li class="menu-item">
+                                                                                                              <a href="/student-lending" title="Student Lending" aria-label="Student Lending" tabindex="0" aria-haspopup="false" aria-expanded="false">
+                          Student Lending
+                        </a>
+                                                                                </li>
+                                                                                                    <li class="menu-item">
+                                                                                                              <a href="/resources" title="Resources" aria-label="Resources" tabindex="0" aria-haspopup="false" aria-expanded="false">
+                          Resources
+                        </a>
+                                                                                </li>
+                                          </ul>
+          </nav>
+              </div>
+    </div>
+    <div class="header-responsive">
+      <div class="header-container page-container">
+        <div class="logo">
+          <a href="/" tabindex="0" aria-label="Link to homepage">
+            <img class="logo-img" src="/themes/custom/finastracanada/logo.svg" alt="The Finastra Canada Logo" data-no-retina="" width="279" height="139.67">
+          </a>
+        </div>
+        <div class="header-hidden-menu-btn">
+          <a href="#header-hidden-menu" class="header-toggle-hiddenarea" tabindex="0" role="button" title="Show the responsive menu" aria-label="Show the responsive menu">
+            <span class="icon" aria-hidden="true">
+              <i class="blade-icon-menu"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <nav class="responsive-hidden-menu">
+    <div class="close-btn-wrapper">
+      <div class="close-btn" role="button" aria-label="Close the menu">
+        <i class="close-icon" aria-hidden="true">
+          <span></span>
+        </i>
+      </div>
+    </div>
+    <div class="menu-wrapper">
+      <ul class="header-menu">
+                                                                        <li class="menu-item active has-sub">
+                                            <a href="" title="Mortgage Technology" aria-label="Mortgage Technology" tabindex="0">
+                  Mortgage Technology
+                                      <i class="cross-icon" aria-hidden="true"></i>
+                                  </a>
+                                            <ul class="sub-menu" aria-haspopup="true" aria-expanded="false">
+                                                                                                        <li class="menu-item active">
+                                                                          <a href="/overview" title="Overview" aria-label="Overview" tabindex="0">
+                            Overview                          
+                          </a>
+                                                
+                      </li>
+                                                                                                                            <li class="menu-item">
+                                                                          <a href="/filogix-community" title="Filogix Expert Community" aria-label="Filogix Expert Community" tabindex="0">
+                            Filogix Expert Community                          
+                          </a>
+                                                
+                      </li>
+                                                                                                                            <li class="menu-item">
+                                                                          <a href="/filogix-expert" title="Filogix Expert Solutions" aria-label="Filogix Expert Solutions" tabindex="0">
+                            Filogix Expert Solutions                          
+                          </a>
+                                                
+                      </li>
+                                                                                                                            <li class="menu-item">
+                                                                          <a href="/mortgage-technology/filogix-mortgage-marketplace" title="Filogix Mortgage Marketplace" aria-label="Filogix Mortgage Marketplace" tabindex="0">
+                            Filogix Mortgage Marketplace                          
+                          </a>
+                                                
+                      </li>
+                                                                                                                            <li class="menu-item">
+                                                                          <a href="/filogix-private-lender-gateway" title="Filogix Private Lender Gateway" aria-label="Filogix Private Lender Gateway" tabindex="0">
+                            Filogix Private Lender Gateway                          
+                          </a>
+                                                
+                      </li>
+                                                                                                                            <li class="menu-item">
+                                                                          <a href="/technical-support" title="Filogix Technical Support" aria-label="Filogix Technical Support" tabindex="0">
+                            Filogix Technical Support                          
+                          </a>
+                                                
+                      </li>
+                                                                                                                            <li class="menu-item">
+                                                                          <a href="/releases" title="Filogix Releases" aria-label="Filogix Releases" tabindex="0">
+                            Filogix Releases                          
+                          </a>
+                                                
+                      </li>
+                                                      </ul>
+                          </li>
+                                                                <li class="menu-item">
+                                            <a href="/cheque-services" title="Cheque Services" aria-label="Cheque Services" tabindex="0">
+                  Cheque Services
+                                  </a>
+                                        </li>
+                                                                <li class="menu-item">
+                                            <a href="/payment-manager" title="Payment Manager" aria-label="Payment Manager" tabindex="0">
+                  Payment Manager
+                                  </a>
+                                        </li>
+                                                                <li class="menu-item">
+                                            <a href="/student-lending" title="Student Lending" aria-label="Student Lending" tabindex="0">
+                  Student Lending
+                                  </a>
+                                        </li>
+                                                                <li class="menu-item">
+                                            <a href="/resources" title="Resources" aria-label="Resources" tabindex="0">
+                  Resources
+                                  </a>
+                                        </li>
+                        </ul>
+    </div>
+  </nav>
+
+<div class="hidden-menu-overlay"></div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/layout/region--header.html.twig' -->
+
+
+
+  <div class="search-modal">
+    <div class="modal-wrapper">
+      <div class="modal-container">
+        <div class="modal-item">
+          <form class="form-search" method="get" action="/search/node">
+            <button type="submit" class="search-btn" role="button" aria-label="Search" title="Search">
+              <i class="blade-icon-search" aria-hidden="true"></i>
+            </button>
+            <input type="text" class="input-search" value="" name="terms" aria-label="Enter keywords" title="Enter keywords" placeholder="Search for ..." autocomplete="off">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="search-close-btn"></div>
+  </div>
+
+  
+  
+
+  
+
+  
+
+  
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--content.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/layout/region.html.twig' -->
+  <div class="region region-content">
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'node' -->
+<!-- FILE NAME SUGGESTIONS:
+   * node--101--full.html.twig
+   * node--101.html.twig
+   * node--page--full.html.twig
+   * node--page.html.twig
+   * node--full.html.twig
+   x node.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/content/node.html.twig' -->
+
+<article data-history-node-id="101" class="node node--type-page node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content" role="img" aria-label="Page background">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'layout__onecol' -->
+<!-- FILE NAME SUGGESTIONS:
+   x layout--onecol.html.twig
+   x layout--onecol.html.twig
+   * layout.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+  <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--banner-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-banner-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block_banner' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block-banner.html.twig' -->
+<div class="page-title-section">
+  <div class="title-section-wrapper">
+    <div class="page-container">
+      <h1 class="title">Mortgage Technology</h1>
+    </div>
+  </div>
+    <div class="title-section-background">
+    <img src="/sites/default/files/2023-07/mortagage-landing-internal-finastra.jpg" alt="Mortgage Technology">
+  </div>
+  </div>
+
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block-banner.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--empty-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-empty-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'empty_block' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/empty-block.html.twig' -->
+<div class="empty-block" style="height: 65px;"></div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/empty-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'layout__twocol_section' -->
+<!-- FILE NAME SUGGESTIONS:
+   x layout--twocol-section.html.twig
+   x layout--twocol-section.html.twig
+   * layout.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/layout/layout--twocol-section.html.twig' -->
+  <div class="page-container grve-column-gap-45">
+    <div class="grve-row">
+      <div class="layout layout--twocol-section layout--twocol-section--67-33">
+
+                  <div class="layout__region layout__region--first grve-column">
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--text2-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-text2-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'textblock2_section' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/textblock-wi-section.html.twig' -->
+<div class="textblock-section">
+  <div class="page-container">
+    <div class="grve-row">
+      <div class="grve-column">
+        <div class="center grve-column">
+          <div class="wrapper">
+                          <h1 class="title">
+                Your trusted connectivity provider
+              </h1>
+                                      <p class="text">
+                Filogix, a Finastra company, has been the technology hub of the Canadian mortgage industry for over two decades, offering secure and reliable software and solutions to mortgage brokers and lenders. Our open platform enables the effective management of the sales process from origination through underwriting, allowing mortgage professionals to seamlessly submit mortgage applications to our lender network from their choice of front-end systems, and for lenders to receive applications regardless of the broker’s platform of choice.
+              </p>
+                      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/textblock-wi-section.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--empty-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-empty-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'empty_block' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/empty-block.html.twig' -->
+<div class="empty-block" style="height: 35px;"></div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/empty-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--plain-html-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-plain-html-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'plain_html_section' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/plain-html-section.html.twig' -->
+<div class="textblock-section animate__animated animate__fadeIn">
+  <div class="page-container">
+    <div class="grve-row">
+      <div class="center page-column">
+        <div class="wrapper">
+                      <div class="text">
+              <p></p><div class="grve-element grve-image grve-align-center"><a class="" href="https://bcove.video/2MSeAfl" target="_blank"><img class="attachment-full size-full" style="opacity:1;" src="/sites/default/files/2023-07/Intro-to-Filogix-video-ENG.jpg" alt="Click here to watch video introduction" width="1080" height="610" sizes="(max-width: 1080px) 100vw, 1080px" loading="lazy"></a></div><div class="grve-element grve-text vc_custom_1600694821794"><p class="p1">Learn how Filogix can help you achieve your business goals.</p></div><div class="wpb_raw_code wpb_content_element wpb_raw_html"><div class="wpb_wrapper"><center><div style="display:block;max-width:640px;position:relative;"><div style="padding-top:56.25%;"><iframe style="bottom:0px;height:100%;left:0px;position:absolute;right:0px;top:0px;width:100%;" src="https://players.brightcove.net/2456793370001/default_default/index.html?videoId=6230365599001" allowfullscreen="" allow="encrypted-media" title="Filogix, a Finastra company, presentation video"></iframe></div></div></center></div></div><p></p>
+            </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/plain-html-section.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+          </div>
+        
+                  <div class="layout__region layout__region--second grve-column">
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--plain-html-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-plain-html-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'plain_html_section' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/plain-html-section.html.twig' -->
+<div class="textblock-section animate__animated animate__fadeIn">
+  <div class="page-container">
+    <div class="grve-row">
+      <div class="center page-column">
+        <div class="wrapper">
+                      <div class="text">
+              <p></p><div class="grve-element grve-image filogixLogo grve-align-center"><img class="attachment-medium size-medium" style="opacity:1;" src="/sites/default/files/2023-07/filogix-logo-en.svg" alt="Filogix Logo" width="350" height="150" loading="lazy"></div><p></p>
+            </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/plain-html-section.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--button-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-button-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'button_block_section' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/button-block-section.html.twig' -->
+<div class="btn-row">
+      <a href="/filogix-community" target="_blank" title="To launch Filogix Expert, visit the Filogix Expert Community." tabindex="0" aria-label="To launch Filogix Expert, visit the Filogix Expert Community." class="button btn-large bg-primary">
+      <span>To launch Filogix Expert, visit the Filogix Expert Community.</span>
+    </a>
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/button-block-section.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--empty-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-empty-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'empty_block' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/empty-block.html.twig' -->
+<div class="empty-block" style="height: 45px;"></div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/empty-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--inline-block--text-list.html.twig
+   * block--inline-block.html.twig
+   * block--layout-builder.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block--inline-block--text-list.html.twig' -->
+<div class="inline-text-list-block">
+  <div class="inline-text-list">
+          <h3>The benefits</h3>
+        
+    
+      <ul class="list">
+                  <li>
+            <div class="grve-row">
+              <div class="icon grve-column grve-column-1-6">
+                <div class="icon-circle">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="text grve-column grve-column-5-6">
+                <p>Greater secure and reliable connectivity than any other available solution</p>
+              </div>
+            </div>
+          </li>
+                  <li>
+            <div class="grve-row">
+              <div class="icon grve-column grve-column-1-6">
+                <div class="icon-circle">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="text grve-column grve-column-5-6">
+                <p>Solutions can be configured to meet the unique needs of your business</p>
+              </div>
+            </div>
+          </li>
+                  <li>
+            <div class="grve-row">
+              <div class="icon grve-column grve-column-1-6">
+                <div class="icon-circle">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="text grve-column grve-column-5-6">
+                <p>  Improved information security and business and risk management</p>
+              </div>
+            </div>
+          </li>
+              </ul>
+
+      </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block--inline-block--text-list.html.twig' -->
+
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/layout/layout--twocol-section.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'layout__onecol' -->
+<!-- FILE NAME SUGGESTIONS:
+   x layout--onecol.html.twig
+   x layout--onecol.html.twig
+   * layout.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+  <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--universal-layout-block-for-articles.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-universal-layout-block-for-articles">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'universal_article_block_tag_overview' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/universal-article-block-tag-overview.html.twig' -->
+<div class="section-articles-list">
+  <div class="page-container">
+                    <div class="isotope-container one-col">
+                              <article class="article-item animate-zoom-in visible">
+              <div class="article-item-wrapper">
+                                  <div class="article-item-image third">
+                    <a href="/sites/default/files/2023-07/Filogix-Expert-POS.pdf" target="_blank">
+                      <img width="800" height="450" src="https://www.finastracanada.com/sites/default/files/2023-06/Thumbnail-Filogix-Expert-POS.jpg" alt="Article on a laptop screen">
+                    </a>
+                  </div>
+                                <div class="article-item-content">
+                  <a href="/sites/default/files/2023-07/Filogix-Expert-POS.pdf" rel="bookmark" aria-label="Filogix Expert" tabindex="0" target="_blank">
+                    <h3 class="article-item-title">Filogix Expert</h3>
+                  </a>
+                                      <p class="article-item-body">
+                      We offer a web-based, reliable and secure end-to-end solution for the creation, submission and management of mortgage applications. Expert POS offers secure connectivity between more lenders and mortgage brokers than any other available solution.
+                    </p>
+                                    <div class="article-item-btn">
+                    <a class="grve-read-more grve-link-text readMore" href="/sites/default/files/2023-07/Filogix-Expert-POS.pdf" aria-label="Read more about Filogix Expert" tabindex="0" target="_blank">
+                      <span>Read more</span>
+                      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+                                        <article class="article-item animate-zoom-in">
+              <div class="article-item-wrapper">
+                                  <div class="article-item-image third">
+                    <a href="/sites/default/files/2023-07/CA_3835_Expert-Solutions-Comparison_FS_EN_v9-2.pdf" target="_blank">
+                      <img width="800" height="450" src="https://www.finastracanada.com/sites/default/files/2023-06/Thumbnail_Expert-Solutions-Comparison_FS_CA3835_FINAL.png" alt="Filogix Expert Plus">
+                    </a>
+                  </div>
+                                <div class="article-item-content">
+                  <a href="/sites/default/files/2023-07/CA_3835_Expert-Solutions-Comparison_FS_EN_v9-2.pdf" rel="bookmark" aria-label="Filogix Expert Plus" tabindex="0" target="_blank">
+                    <h3 class="article-item-title">Filogix Expert Plus</h3>
+                  </a>
+                                      <p class="article-item-body">
+                      The steppingstone to a fully digital mortgage experience. A free solution you can access anywhere, anytime to do more, faster.
+                    </p>
+                                    <div class="article-item-btn">
+                    <a class="grve-read-more grve-link-text readMore" href="/sites/default/files/2023-07/CA_3835_Expert-Solutions-Comparison_FS_EN_v9-2.pdf" aria-label="Read more about Filogix Expert Plus" tabindex="0" target="_blank">
+                      <span>Read more</span>
+                      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+                                        <article class="article-item animate-zoom-in">
+              <div class="article-item-wrapper">
+                                  <div class="article-item-image third">
+                    <a href="/sites/default/files/2023-07/Filogix-Expert-Pro-FS-EN.pdf" target="_blank">
+                      <img width="800" height="450" src="https://www.finastracanada.com/sites/default/files/2023-06/Thumbnail_Filogix-Expert-Pro_FS_EN_CA3671_FINAL-1_0.png" alt="Article on a laptop screen">
+                    </a>
+                  </div>
+                                <div class="article-item-content">
+                  <a href="/sites/default/files/2023-07/Filogix-Expert-Pro-FS-EN.pdf" rel="bookmark" aria-label="Filogix Expert Pro" tabindex="0" target="_blank">
+                    <h3 class="article-item-title">Filogix Expert Pro</h3>
+                  </a>
+                                      <p class="article-item-body">
+                      Available any time, from any type of device, Filogix Expert Pro offers integrated e-signature capabilities, document storage, email marketing features, bank statement retrieval, and much more. This is the future of deal management systems in the industry, enabling you to do more, faster. 
+                    </p>
+                                    <div class="article-item-btn">
+                    <a class="grve-read-more grve-link-text readMore" href="/sites/default/files/2023-07/Filogix-Expert-Pro-FS-EN.pdf" aria-label="Read more about Filogix Expert Pro" tabindex="0" target="_blank">
+                      <span>Read more</span>
+                      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+                                        <article class="article-item animate-zoom-in">
+              <div class="article-item-wrapper">
+                                  <div class="article-item-image third">
+                    <a href="/sites/default/files/2023-07/Filogix-Exchange.pdf" target="_blank">
+                      <img width="800" height="450" src="https://www.finastracanada.com/sites/default/files/2023-06/Filogix-Exchange-ov.png" alt="Article on a laptop screen">
+                    </a>
+                  </div>
+                                <div class="article-item-content">
+                  <a href="/sites/default/files/2023-07/Filogix-Exchange.pdf" rel="bookmark" aria-label="Filogix Exchange" tabindex="0" target="_blank">
+                    <h3 class="article-item-title">Filogix Exchange</h3>
+                  </a>
+                                      <p class="article-item-body">
+                      Filogix’s secure document management solution enables lenders and mortgage brokers to securely share, store, and manage documents associated with the mortgage application process. Exchange seamlessly integrates with Expert mortgage origination and Express mortgage underwriting solutions, to maximize the efficiency gains associated with electronic document management, while minimizing the additional effort, risk and cost inherent in maintaining a stand-alone solution.
+                    </p>
+                                    <div class="article-item-btn">
+                    <a class="grve-read-more grve-link-text readMore" href="/sites/default/files/2023-07/Filogix-Exchange.pdf" aria-label="Read more about Filogix Exchange" tabindex="0" target="_blank">
+                      <span>Read more</span>
+                      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+                                        <article class="article-item animate-zoom-in">
+              <div class="article-item-wrapper">
+                                  <div class="article-item-image third">
+                    <a href="/sites/default/files/2023-07/Filogix-Express.pdf" target="_blank">
+                      <img width="800" height="450" src="https://www.finastracanada.com/sites/default/files/2023-06/Filogix-Express-FactSheet_0.png" alt="Article on a laptop screen">
+                    </a>
+                  </div>
+                                <div class="article-item-content">
+                  <a href="/sites/default/files/2023-07/Filogix-Express.pdf" rel="bookmark" aria-label="Filogix Express" tabindex="0" target="_blank">
+                    <h3 class="article-item-title">Filogix Express</h3>
+                  </a>
+                                      <p class="article-item-body">
+                      Our mortgage underwriting solution simplifies activities for lenders, lowers operating costs and enables quicker turnaround on decisions, while ensuring compliance with their unique credit risk policies. Filogix Express provides robust out-of-the-box functionality and includes comprehensive processes and security features for fraud management.
+                    </p>
+                                    <div class="article-item-btn">
+                    <a class="grve-read-more grve-link-text readMore" href="/sites/default/files/2023-07/Filogix-Express.pdf" aria-label="Read more about Filogix Express" tabindex="0" target="_blank">
+                      <span>Read more</span>
+                      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+                                          </div>
+      </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/universal-article-block-tag-overview.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'layout__onecol' -->
+<!-- FILE NAME SUGGESTIONS:
+   x layout--onecol.html.twig
+   x layout--onecol.html.twig
+   * layout.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+  <div class="light-gray layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--resources-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-resources-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'resources_block_layout' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/resources-block-section.html.twig' -->
+<div class="section-resources">
+  <div class="page-container">
+        <div class="grve-row">
+      <div class="grve-column-1-2">
+        <h4>Resources</h4>
+      </div>
+    </div>
+        <div class="grve-row">
+      <div class="grve-column-1-2">
+                  <div class="resources-item animate-zoom-in">
+                        <div class="resources-item-image">
+              <a href="/sites/default/files/2023-07/Shaping-2021-MC-EN.pdf" tabindex="0" aria-label="Learn more about Shaping 2021: Digital as the key driver of the Canadian Mortgage Industry" target="_blank">
+                <img src="https://www.finastracanada.com/sites/default/files/2023-06/shaping-2021-filogix-2.png" alt="Shaping 2021: Digital as the key driver of the Canadian Mortgage Industry">
+              </a>
+            </div>
+                        <div class="resource-item-title">
+              <a class="grve-read-more grve-link-text readMore" aria-label="Shaping 2021: Digital as the key driver of the Canadian Mortgage Industry" href="/sites/default/files/2023-07/Shaping-2021-MC-EN.pdf" tabindex="0" target="_blank">
+              <h3>Shaping 2021: Digital as the key driver of the Canadian Mortgage Industry</h3>
+              </a>
+            </div>
+            <div class="resource-item-btn">
+              <a class="grve-read-more grve-link-text readMore" aria-label="Shaping 2021: Digital as the key driver of the Canadian Mortgage Industry" href="/sites/default/files/2023-07/Shaping-2021-MC-EN.pdf" tabindex="0" target="_blank">
+                <span>Learn more</span>
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+              </div>
+      <div class="grve-column-1-2">
+                  <div class="resources-item animate-zoom-in">
+                        <div class="resources-item-image">
+              <a href="/sites/default/files/2023-07/Filogix-Expert-Pro-FS-EN.pdf" tabindex="0" aria-label="Learn more about Filogix Expert Pro: The most powerful solution in the industry" target="_blank">
+                <img src="https://www.finastracanada.com/sites/default/files/2023-06/filogixpro-mostpowerful-eng.png" alt="Filogix Expert Pro: The most powerful solution in the industry">
+              </a>
+            </div>
+            <div class="resource-item-title">
+              <a class="grve-read-more grve-link-text readMore" aria-label="Filogix Expert Pro: The most powerful solution in the industry" href="/sites/default/files/2023-07/Filogix-Expert-Pro-FS-EN.pdf" tabindex="0" target="_blank">
+              <h3>Filogix Expert Pro: The most powerful solution in the industry</h3>
+              </a>
+            </div>
+                        <div class="resource-item-btn">
+              <a class="grve-read-more grve-link-text readMore" href="/sites/default/files/2023-07/Filogix-Expert-Pro-FS-EN.pdf" tabindex="0" aria-label="Filogix Expert Pro: The most powerful solution in the industry" target="_blank">
+                <span>Learn more</span>
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/resources-block-section.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'layout__onecol' -->
+<!-- FILE NAME SUGGESTIONS:
+   x layout--onecol.html.twig
+   x layout--onecol.html.twig
+   * layout.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+  <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--cta-layout-block.html.twig
+   * block--custom-layout-blocks.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+<div class="block block-custom-layout-blocks block-cta-layout-block">
+  
+  
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'cta_block_section' -->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/block/cta-block-section.html.twig' -->
+<div class="section-contact">
+  <div class="page-container">
+    <div class="page-column">
+              <h4>Do you want to know more about our solutions?</h4>
+            <div class="btn-row">
+                  <a href="https://www.finastracanada.com/contact-us" title="Contact Us" tabindex="0" aria-label="Contact Us" class="button btn-large bg-primary">
+            <span>Contact us</span>
+          </a>
+              </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/cta-block-section.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/block/block.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable9/layouts/layout_discovery/onecol/layout--onecol.html.twig' -->
+
+
+  </div>
+</article>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/content/node.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/layout/region.html.twig' -->
+
+
+    </div>
+    
+    
+  </main>
+
+      <footer class="footer" role="contentinfo">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   x region--footer.html.twig
+   * region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/finastracanada/templates/layout/region--footer.html.twig' -->
+<div class="footer-wrapper" role="img" aria-label="Footer background">
+  <div class="page-container footer-container">
+    <div class="footer-row">
+                                    <div class="footer-col grve-column">
+              <h5 class="title">Solutions</h5>
+                              <ul class="footer-menu">
+                  		                                                                                    <li class="menu-item">
+                          <a href="/overview" aria-label="Mortgage Technology" tabindex="0">Mortgage Technology</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="/cheque-services" aria-label="Cheque Services" tabindex="0">Cheque Services</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="/payment-manager" aria-label="Payment Manager" tabindex="0">Payment Manager</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="/student-lending" aria-label="Student Lending" tabindex="0">Student Lending</a>
+                        </li>
+                      		                                                  </ul>
+                          </div>
+                                        <div class="footer-col grve-column">
+              <h5 class="title">Company</h5>
+                              <ul class="footer-menu">
+                  		                                                                                    <li class="menu-item">
+                          <a href="/about-us" aria-label="About Us" tabindex="0">About Us</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="/contact-us" aria-label="Contact Us" tabindex="0">Contact Us</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="/office-locations" aria-label="Office Locations" tabindex="0">Office Locations</a>
+                        </li>
+                      		                                                  </ul>
+                          </div>
+                                        <div class="footer-col grve-column">
+              <h5 class="title">Legal</h5>
+                              <ul class="footer-menu">
+                  		                                                                                    <li class="menu-item">
+                          <a href="https://www.finastra.com/privacy-policy" aria-label="Privacy Policy" tabindex="0" target="_blank">Privacy Policy</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="https://www.finastra.com/terms-conditions" aria-label="Terms and Conditions" tabindex="0" target="_blank">Terms and Conditions</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="https://www.finastra.com/accessibility-standards-for-customer-service" aria-label="Accessibility Standards for Customer Service" tabindex="0" target="_blank">Accessibility Standards for Customer Service</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="https://www.finastra.com/cookie-policy" aria-label="Cookie Policy" tabindex="0" target="_blank">Cookie Policy</a>
+                        </li>
+                      		                                  		                                                                                    <li class="menu-item">
+                          <a href="/california-privacy-notice" aria-label="California Privacy Notice" tabindex="0">California Privacy Notice</a>
+                        </li>
+                      		                                                  </ul>
+                          </div>
+                              <div class="footer-col grve-column">
+        <div class="footer-img">
+          <img width="182" height="90" src="/themes/custom/finastracanada/images/Future-finance-en.svg" alt="The future of finance is open." loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2023 Finastra. All rights reserved</p>
+    </div>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/layout/region--footer.html.twig' -->
+
+
+    </footer>
+  
+</div>
+<!-- END OUTPUT from 'themes/custom/finastracanada/templates/layout/page.html.twig' -->
+
+
+  </div><iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="https://consentcdn.cookiebot.com/sdk/bc-v4.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/content/off-canvas-page-wrapper.html.twig' -->
+
+
+    
+
+    <div class="page-back-top" tabindex="0" role="button" aria-label="Go back to top">
+      <i class="blade-icon-arrow-top-alt" aria-hidden="true"></i>
+    </div>
+
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.0"></script>
+<script src="/themes/custom/finastracanada/js/swiper-bundle.min.js?v=10.1.1"></script>
+<script src="/themes/custom/finastracanada/js/isotope.pkgd.min.js?v=10.1.1"></script>
+<script src="/themes/custom/finastracanada/js/animations.js?v=10.1.1"></script>
+<script src="/themes/custom/finastracanada/js/main.js?v=10.1.1"></script>
+
+  
+  
+
+
+
+
+<img id="CookiebotSessionPixel" src="https://imgsct.cookiebot.com/1.gif?dgi=98838fd5-0f77-4da3-894d-e4e91dd0092a" alt="Cookiebot session tracker icon loaded" data-cookieconsent="ignore" style="display: none;"></body></html>
